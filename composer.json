@@ -1,0 +1,25 @@
+{
+    "name": "sexlog/spotter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Raphael Martignoni",
+            "email": "rmartignoni@gmail.com"
+        },
+        {
+            "name": "Icaro Fonzar",
+            "email": "icaro.isf@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sexlog\\Spotter\\": "src/"
+        }
+    },
+    "require": {
+        "geoip2/geoip2": "2.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.8.24"
+    }
+}

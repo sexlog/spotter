@@ -1,1 +1,1 @@
-# spotter
+# geoip2-helper
