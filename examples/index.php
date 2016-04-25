@@ -18,7 +18,6 @@
     // The ip to look for in the database
     $ip = '179.127.62.13';
 
-    // The geoip2-helper2 instance
-    $spotter = new Spotter($maxMindProvider, null);
+    $spotter = new Spotter($maxMindProvider, $ip);
 
-    $spotter->getCityName();
+    echo $spotter->getCityName();

@@ -47,4 +47,9 @@
         {
             return $this->provider->getProperty('city-name', $this->ip);
         }
+
+        public function getCountryName()
+        {
+            return $this->provider->getProperty('country-name', $this->ip);
+        }
     }

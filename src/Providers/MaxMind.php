@@ -28,8 +28,10 @@
                 throw new InvalidIpException;
             }
 
-            $city = $this->reader->city($ip);
+            list($method, $property) = explode('-', $property);
 
-            return $city->name;
+            $city = $this->reader->$method($ip);
+
+            return $city->city->{$property};
         }
     }
