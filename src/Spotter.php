@@ -48,7 +48,7 @@
          */
         public function getCityName()
         {
-            return $this->provider->getProperty(['city', 'name'], $this->ip);
+            return $this->provider->getLocationProperty(['city', 'name'], $this->ip);
         }
 
         /**
@@ -56,7 +56,7 @@
          */
         public function getCountryName()
         {
-            return $this->provider->getProperty(['country', 'name'], $this->ip);
+            return $this->provider->getLocationProperty(['country', 'name'], $this->ip);
         }
 
         /**
@@ -64,7 +64,7 @@
          */
         public function getCountryIsoCode()
         {
-            return $this->provider->getProperty(['country', 'isoCode'], $this->ip);
+            return $this->provider->getLocationProperty(['country', 'isoCode'], $this->ip);
         }
 
         /**
@@ -72,7 +72,7 @@
          */
         public function getPostalCode()
         {
-            return $this->provider->getProperty(['postal','code'], $this->ip);
+            return $this->provider->getLocationProperty(['postal','code'], $this->ip);
         }
 
         /**
@@ -80,7 +80,7 @@
          */
         public function getLatitude()
         {
-            return $this->provider->getProperty(['location','latitude'], $this->ip);
+            return $this->provider->getLocationProperty(['location','latitude'], $this->ip);
         }
 
         /**
@@ -88,7 +88,7 @@
          */
         public function getLongitude()
         {
-            return $this->provider->getProperty(['location','longitude'], $this->ip);
+            return $this->provider->getLocationProperty(['location','longitude'], $this->ip);
         }
 
     }

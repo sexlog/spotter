@@ -22,7 +22,7 @@
          * @param string $properties
          * @param string $ip
          */
-        public function getProperty($properties, $ip)
+        public function getLocationProperty($properties, $ip)
         {
             if (!$this->isValidIp($ip))
             {

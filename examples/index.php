@@ -20,4 +20,4 @@
 
     $spotter = new Spotter($maxMindProvider, $ip);
 
-    print_r($spotter->getConnectionType());
+    print_r($spotter->getCityName());
