@@ -4,6 +4,7 @@
 
     use GeoIp2\Database\Reader;
     use Sexlog\Spotter\Exceptions\InvalidIpException;
+    use Sexlog\Spotter\Exceptions\MissingPropertiesException;
 
     class MaxMind extends Provider implements ProviderInterface
     {
@@ -18,20 +19,26 @@
         }
 
         /**
-         * @param string $property
+         * @param string $properties
          * @param string $ip
          */
-        public function getProperty($property, $ip)
+        public function getLocationProperty($properties, $ip)
         {
             if (!$this->isValidIp($ip))
             {
                 throw new InvalidIpException;
             }
 
-            list($method, $property) = explode('-', $property);
+            $location = array_shift($properties);
+            $property = array_shift($properties);
 
-            $city = $this->reader->$method($ip);
+            if (!$location || !$property)
+            {
+                throw new MissingPropertiesException;
+            }
 
-            return $city->city->{$property};
+            $record = $this->reader->city($ip);
+
+            return $record->{$location}->{$property};
         }
     }

@@ -4,5 +4,5 @@
 
     interface ProviderInterface
     {
-        public function getProperty($property, $ip);
+        public function getLocationProperty($property, $ip);
     }

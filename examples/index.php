@@ -16,8 +16,8 @@
     $maxMindProvider = new MaxMind($reader);
 
     // The ip to look for in the database
-    $ip = '179.127.62.13';
+    $ip = '128.101.101.101'; // Minneapolis - US
 
     $spotter = new Spotter($maxMindProvider, $ip);
 
-    echo $spotter->getCityName();
+    print_r($spotter->getCountryIsoCode());
