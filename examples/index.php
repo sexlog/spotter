@@ -20,4 +20,4 @@
 
     $spotter = new Spotter($maxMindProvider, $ip);
 
-    print_r($spotter->getCityName());
+    print_r($spotter->getCountryIsoCode());
