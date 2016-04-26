@@ -43,13 +43,52 @@
             $this->ip = $ip;
         }
 
+        /**
+         * @return mixed
+         */
         public function getCityName()
         {
-            return $this->provider->getProperty('city-name', $this->ip);
+            return $this->provider->getProperty(['city', 'name'], $this->ip);
         }
 
+        /**
+         * @return mixed
+         */
         public function getCountryName()
         {
-            return $this->provider->getProperty('country-name', $this->ip);
+            return $this->provider->getProperty(['country', 'name'], $this->ip);
         }
+
+        /**
+         * @return mixed
+         */
+        public function getCountryIsoCode()
+        {
+            return $this->provider->getProperty(['country', 'isoCode'], $this->ip);
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getPostalCode()
+        {
+            return $this->provider->getProperty(['postal','code'], $this->ip);
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getLatitude()
+        {
+            return $this->provider->getProperty(['location','latitude'], $this->ip);
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getLongitude()
+        {
+            return $this->provider->getProperty(['location','longitude'], $this->ip);
+        }
+
     }
