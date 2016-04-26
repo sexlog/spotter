@@ -16,7 +16,6 @@
     $maxMindProvider = new MaxMind($reader);
 
     // The ip to look for in the database
-    //$ip = '179.127.62.13'; //Marília - SP
     $ip = '128.101.101.101'; // Minneapolis - US
 
     $spotter = new Spotter($maxMindProvider, $ip);
